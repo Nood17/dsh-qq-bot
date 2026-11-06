@@ -1,0 +1,140 @@
+{
+  "version": 2,
+  "adminQq": 1578077907,
+  "napcat": {
+    "wsUrl": "ws://127.0.0.1:3001",
+    "wsToken": "<REDACTED>",
+    "httpUrl": "http://127.0.0.1:3000",
+    "httpToken": "<REDACTED>"
+  },
+  "dsh": {
+    "agentPreset": "qq-chat-plus",
+    "qqWorkspacePath": "/home/nood/文档/deepseek-harness/default-workspace",
+    "workspaceTitle": "QQ 聊天",
+    "sessionsFile": "state/sessions.json",
+    "modelByChat": {}
+  },
+  "outbound": {
+    "longForwardThreshold": 400,
+    "longForwardChunkSize": 800,
+    "quoteAfterMsgs": 3,
+    "groupContextCount": 15,
+    "proactiveMaxMessages": 0
+  },
+  "archive": {
+    "enabled": true,
+    "dir": "logs/qq_chat"
+  },
+  "toolPrefix": "mcp__qq__",
+  "plugins": {},
+  "pluginConfig": {
+    "persona-voice": {
+      "activePersona": "蓝色大肥鱼"
+    },
+    "gate-wake": {
+      "allowedUsers": [],
+      "groupUserAllowlist": "202523944:",
+      "groupAtRequired": true,
+      "keywords": "<REDACTED>",
+      "groupUserBlocklist": "",
+      "ignoreGroups": [
+        795265219
+      ],
+      "callAck": false
+    },
+    "link-parser": {
+      "enabled": true
+    },
+    "stickers": {
+      "skipGif": false,
+      "deleteAllowed": [
+        "812151623"
+      ],
+      "collect": false
+    },
+    "private-friend-gate": {
+      "allowList": [
+        "2245598248",
+        "3131719715",
+        "3557272049"
+      ]
+    },
+    "user-memory": {
+      "enabled": true,
+      "lastN": 10,
+      "maxChars": 1200,
+      "dir": "qq-users",
+      "injectChats": [
+        "812151623"
+      ]
+    },
+    "anti-repeat": {
+      "enabled": false
+    },
+    "group-welcome": {
+      "enabled": false,
+      "atNewcomer": false,
+      "modelFallback": false
+    },
+    "video-read": {
+      "enabled": true,
+      "sidecarUrl": "http://127.0.0.1:3972",
+      "onlyWhenAddressed": true,
+      "frames": 32,
+      "maxSide": 512,
+      "maxSeconds": 600,
+      "timeoutMs": 60000,
+      "tellOnFail": true
+    }
+  },
+  "pacing": {
+    "merge": {
+      "enabled": false,
+      "windowMs": 2000,
+      "maxWaitMs": 6000,
+      "skipIfSlowMs": 30000,
+      "windowActiveMs": 1000,
+      "activeGapMs": 120000
+    },
+    "reply": {
+      "enabled": true,
+      "hourlyMax": 6,
+      "groups": [
+        "202523944"
+      ],
+      "style": {
+        "splitEnabled": true,
+        "splitProbability": 0.5,
+        "splitMinLen": 12,
+        "splitDelayMs": 1000,
+        "stickerEnabled": true,
+        "stickerProbability": 0.5
+      },
+      "alwaysJudge": true,
+      "judgeGapMs": 12000,
+      "quietStart": 2,
+      "quietEnd": 7,
+      "privateTargets": [
+        "812151623"
+      ],
+      "privateSilenceMs": 3000000,
+      "privateMinGapMs": 1800000,
+      "awakeMs": 1800000,
+      "sleepJudgeGapMs": 300000,
+      "activeWindowMs": 120000,
+      "periodicJudgeMs": 1200000,
+      "groupProactiveEnabled": false
+    }
+  },
+  "credentials": {
+    "gptImage": {
+      "protocol": "openai-images",
+      "baseUrl": "",
+      "apiKey": "",
+      "model": "gpt-image-2"
+    }
+  },
+  "compat": {
+    "imageRoots": []
+  }
+}
